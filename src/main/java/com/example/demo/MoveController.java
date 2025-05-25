@@ -22,7 +22,7 @@ public class MoveController {
             return new Space(1);
         } else if (inTakenSpaces.contains(1) && inTakenSpaces.size() == 1) {// /computer?spaces=1 -> Board with only space 1 marked - move to space 2
             return new Space(2);
-        } else if (inTakenSpaces.containsAll(Arrays.asList(1, 3, 7))) {// /computer?spaces=1,3,7 -> Board with spaces 1, 3, and 7 marked - move to space 2
+        } else if (inTakenSpaces.containsAll(Arrays.asList(1, 3, 7)) && inTakenSpaces.size() == 3) {// /computer?spaces=1,3,7 -> Board with spaces 1, 3, and 7 marked - move to space 2
             return new Space(2);
         } else {//Default case
             return new Space(444);
